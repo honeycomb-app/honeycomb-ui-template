@@ -1,4 +1,6 @@
-# Rspack project
+# JigJoyUI Starter Template
+
+Starter template for integrating JigJoyUI with Tailwind CSS and Rspack.
 
 ## Setup
 
