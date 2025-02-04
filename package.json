@@ -3,11 +3,13 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "serve": "cross-env NODE_ENV=development rspack serve",
-    "build": "cross-env NODE_ENV=production rspack build"
+    "start": "rspack serve --config configs/rspack.dev.js",
+    "serve": "rspack serve --config configs/rspack.dev.js",
+    "build": "rspack --config configs/rspack.prod.js",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\""
   },
   "dependencies": {
-    "@jigjoy-io/ui": "^0.1.6",
+    "@jigjoy-io/ui": "^0.1.8",
     "framer-motion": "^12.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -19,14 +21,12 @@
     "@tailwindcss/postcss": "^4.0.0",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
-    "cross-env": "^7.0.3",
-    "install": "^0.13.0",
-    "npm": "^11.0.0",
-    "postcss": "^8.5.1",
+    "dotenv-webpack": "^8.1.0",
     "postcss-loader": "^8.1.1",
     "react-refresh": "^0.14.0",
     "tailwindcss": "^4.0.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "webpack-merge": "^6.0.1"
   }
 }
