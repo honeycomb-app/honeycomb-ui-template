@@ -7,7 +7,7 @@
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
-"@babel/code-frame@^7.0.0":
+"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.16.7":
   version "7.26.2"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.26.2.tgz#4b5fab97d33338eff916235055f0ebc21e573a85"
   integrity sha512-RJlIHRueQgwWitWgF8OdFYGZX328Ax5BCemNGlqHfplnRT9ESi8JkFlvaVYbS+UubVY6dpv87Fs2u5M29iNFVQ==
@@ -252,7 +252,7 @@
     webpack-dev-server "5.0.4"
     ws "^8.16.0"
 
-"@rspack/lite-tapable@1.0.1":
+"@rspack/lite-tapable@1.0.1", "@rspack/lite-tapable@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@rspack/lite-tapable/-/lite-tapable-1.0.1.tgz#d4540a5d28bd6177164bc0ba0bee4bdec0458591"
   integrity sha512-VynGOEsVw2s8TAlLf/uESfrgfrq2+rcXB1muPJYBWbsm1Oa6r5qVQhjA5ggM6z/coYPrsVMgovl3Ff7Q7OCp1w==
@@ -755,7 +755,7 @@ chalk@^4.1.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chokidar@^3.6.0:
+chokidar@^3.5.3, chokidar@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.6.0.tgz#197c6cc669ef2a8dc5e7b4d97ee4e092c3eb0d5b"
   integrity sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==
@@ -1709,7 +1709,7 @@ media-typer@0.3.0:
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==
 
-memfs@^4.6.0:
+memfs@^4.14.0, memfs@^4.6.0:
   version "4.17.0"
   resolved "https://registry.yarnpkg.com/memfs/-/memfs-4.17.0.tgz#a3c4b5490b9b1e7df5d433adc163e08208ce7ca2"
   integrity sha512-4eirfZ7thblFmqFjywlTmuWVSvccHAJbn1r8qQLzmTO11qcqpohOjmY2mFce6x7x7WtskzRqApPD0hv+Oa74jg==
@@ -1774,7 +1774,7 @@ minimalistic-assert@^1.0.0:
   resolved "https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
   integrity sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==
 
-minimatch@^9.0.4:
+minimatch@^9.0.4, minimatch@^9.0.5:
   version "9.0.5"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-9.0.5.tgz#d74f9dd6b57d83d8e98cfb82133b03978bc929e5"
   integrity sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==
@@ -1983,7 +1983,7 @@ postcss-loader@^8.1.1:
     jiti "^1.20.0"
     semver "^7.5.4"
 
-postcss@^8.4.41:
+postcss@^8.4.41, postcss@^8.5.1:
   version "8.5.1"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.5.1.tgz#e2272a1f8a807fafa413218245630b5db10a3214"
   integrity sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==
@@ -2486,6 +2486,18 @@ tree-dump@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/tree-dump/-/tree-dump-1.0.2.tgz#c460d5921caeb197bde71d0e9a7b479848c5b8ac"
   integrity sha512-dpev9ABuLWdEubk+cIaI9cHwRNNDjkBBLXTwI4UCUFdQ5xXKqNXoK4FEciw/vxf+NQ7Cb7sGUyeUtORvHIdRXQ==
+
+ts-checker-rspack-plugin@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/ts-checker-rspack-plugin/-/ts-checker-rspack-plugin-1.1.1.tgz#0cefe8083e9d32980786d45b959e2d596bdee8a6"
+  integrity sha512-BlpPqnfAmV0TcDg58H+1qV8Zb57ilv0x+ajjnxrVQ6BWgC8HzAdc+TycqDOJ4sZZYIV+hywQGozZFGklzbCR6A==
+  dependencies:
+    "@babel/code-frame" "^7.16.7"
+    "@rspack/lite-tapable" "^1.0.0"
+    chokidar "^3.5.3"
+    memfs "^4.14.0"
+    minimatch "^9.0.5"
+    picocolors "^1.1.1"
 
 ts-node@^10.9.2:
   version "10.9.2"

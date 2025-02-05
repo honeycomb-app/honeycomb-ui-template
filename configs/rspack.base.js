@@ -1,10 +1,7 @@
 const path = require("path")
 const rspack = require("@rspack/core")
 const Dotenv = require("dotenv-webpack")
-
-const RefreshPlugin = require("@rspack/plugin-react-refresh")
-
-const isDev = process.env.NODE_ENV === "development"
+const { TsCheckerRspackPlugin } = require('ts-checker-rspack-plugin');
 
 // Target browsers, see: https://github.com/browserslist/browserslist
 const targets = ["chrome >= 87", "edge >= 88", "firefox >= 78", "safari >= 14"]
@@ -25,28 +22,25 @@ module.exports = {
 				type: "asset",
 			},
 			{
-				test: /\.(jsx?|tsx?)$/,
-				use: [
-					{
-						loader: "builtin:swc-loader",
-						options: {
-							jsc: {
-								parser: {
-									syntax: "typescript",
-									tsx: true,
-								},
-								transform: {
-									react: {
-										runtime: "automatic",
-										development: isDev,
-										refresh: isDev,
-									},
+				test: /\.(ts|tsx|js|jsx)$/,
+				use: {
+					loader: "builtin:swc-loader",
+					options: {
+						sourceMap: true,
+						jsc: {
+							parser: {
+								syntax: "typescript",
+								tsx: true,
+							},
+							transform: {
+								react: {
+									runtime: "automatic",
 								},
 							},
-							env: { targets },
 						},
 					},
-				],
+				},
+				exclude: /node_modules/,
 			},
 			{
 				test: /\.css$/,
@@ -57,14 +51,23 @@ module.exports = {
 	},
 	plugins: [
 		new rspack.HtmlRspackPlugin({
-			template: "./index.html",
+			template: path.join(__dirname, "../index.html"),
 		}),
-        new Dotenv({
+		new Dotenv({
 			path: "./.env",
 			safe: true,
 		}),
-		isDev ? new RefreshPlugin() : null,
-	].filter(Boolean),
+		new TsCheckerRspackPlugin({
+			typescript: {
+			  configOverwrite: {
+				compilerOptions: {
+				  jsx: "react-jsx", 
+				  allowJs: true, 
+				},
+			  },
+			},
+		  }),
+	],
 	optimization: {
 		minimizer: [
 			new rspack.SwcJsMinimizerRspackPlugin(),
@@ -76,7 +79,7 @@ module.exports = {
 	resolve: {
 		extensions: [".jsx", ".tsx", ".ts", ".js", ".json"],
 	},
-    experiments: {
+	experiments: {
 		css: true,
 	},
 }
