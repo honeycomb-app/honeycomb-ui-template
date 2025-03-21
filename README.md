@@ -1,6 +1,6 @@
-# JigJoyUI Starter Template
+# HoneycombUI Starter Template
 
-Starter template for integrating JigJoyUI with Tailwind CSS and Rspack.
+Starter template for integrating HoneycombUI with Tailwind CSS and Rspack.
 
 ## Setup
 
@@ -23,4 +23,3 @@ Build the app for production:
 ```bash
 npm run build
 ```
-@ jigjoy-template

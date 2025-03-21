@@ -2,12 +2,12 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App"
 import "./index.css"
-import { JigJoyUIProvider } from "@jigjoy-io/ui"
+import { HoneycombUIProvider } from "@honeycomb-app/design"
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<React.StrictMode>
-		<JigJoyUIProvider theme="dark">
+		<HoneycombUIProvider theme="dark">
 			<App />
-		</JigJoyUIProvider>
+		</HoneycombUIProvider>
 	</React.StrictMode>
 )
