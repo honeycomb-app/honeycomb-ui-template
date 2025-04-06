@@ -1,4 +1,4 @@
 
 export default function App() {
-	return <h1 className="bg-surface-100 text-base p-4 font-bold text-3xl">Honeycomb UI Template</h1>
+	return <h1 className="bg-primary p-4 text-highlight text-3xl">Honeycomb UI Template</h1>
 }
