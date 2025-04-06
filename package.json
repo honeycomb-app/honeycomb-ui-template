@@ -9,7 +9,7 @@
     "format": "prettier --write \"src/**/*.{ts,tsx}\""
   },
   "dependencies": {
-    "@honeycomb-app/design": "^0.0.58",
+    "@honeycomb-app/design": "^0.0.64",
     "framer-motion": "^12.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
